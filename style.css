@@ -214,6 +214,17 @@ section {
     margin-bottom: 12px;
 }
 
+.rating {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.rating span {
+    color: #555;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
 .btn {
     background: orange;
     color: white;
