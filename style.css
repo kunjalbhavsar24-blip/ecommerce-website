@@ -291,7 +291,7 @@ footer {
     padding-top: 15px;
 }
 
-@media screen and (min-width:425px) and (max-width: 768px) {
+@media screen and (width: 768px) {
     body {
         background-color: lightgreen;
         width: 100%;
