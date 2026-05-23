@@ -19,12 +19,17 @@
                 <i class="material-icons">shopping_bag</i> ShopEasy
             </div>
 
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#categories">Categories</a>
-                <a href="#products">Products</a>
-                <a href="#offers">Offers</a>
-                <a href="#contact">Contact</a>
+            <div class="nav-links" id="sidebar">
+                <button id="closeToggle" class="close-toggle">
+                    <i class="material-icons">menu</i>
+                </button>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#categories">Categories</a>
+                    <a href="#products">Products</a>
+                    <a href="#offers">Offers</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
             <div class="right_container">
                 <div class="search-bar">
@@ -250,5 +255,34 @@
     </footer>
 
 </body>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const closeToggle = document.getElementById('closeToggle');
+    const sidebar = document.getElementById('sidebar');
+
+    // Open Sidebar
+    menuToggle.addEventListener('click', () => {
+        sidebar.classList.add('active');
+    });
+
+    // Close Sidebar
+    closeToggle.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+    });
+
+    // Optional: Close sidebar if a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+        });
+    });
+
+    // Placeholder for your search function to avoid console errors
+    function searchProducts() {
+        let input = document.getElementById('searchInput').value;
+        console.log("Searching for: " + input);
+    }
+</script>
 
 </html>
